@@ -122,13 +122,13 @@ const Login = () => {
                         </Button>
 
                         {/* Google Sign-In Button */}
-                        <button
+{/*                         <button
                             type="button"
                             onClick={handleGoogleSignIn}
                             className="bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg w-full"
                         >
                             Login with Google
-                        </button>
+                        </button> */}
                     </form>
                 </div>
             </div>
