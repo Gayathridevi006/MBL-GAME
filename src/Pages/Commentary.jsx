@@ -167,14 +167,16 @@ const CommentaryCard = () => {
                                         <NativeSelect value={language} onChange={(e) => setLanguage(e.target.value)}>
                                             <option value="" disabled>Select a language</option>
                                             <option value="en">English</option>
-                                            <option value="sp">Spanish</option>
+                                            <option value="es">Spanish</option>
+                                            <option value="ja">Japanese</option>
+                                            <option value="de">German</option>
                                         </NativeSelect>
                                     </FormControl>
                                 </Box>
                             </div>
 
                             {/* Commentary Box (Spans Full Width) */}
-                            <Box sx={{ width: "100%", mt: 6 }}>
+                            {/* <Box sx={{ width: "100%", mt: 6 }}>
                                 <TextField
                                     label="Commentary"
                                     variant="outlined"
@@ -184,7 +186,7 @@ const CommentaryCard = () => {
                                     onChange={(e) => setCommentary(e.target.value)}
                                     fullWidth
                                 />
-                            </Box>
+                            </Box> */}
 
                             {/* Start Game Button */}
                             <button
@@ -216,7 +218,7 @@ const CommentaryCard = () => {
                         <p><strong>Team:</strong> {team || "Not Selected"}</p>
                         <p><strong>Player:</strong> {player || "Not Selected"}</p>
                         <p><strong>Language:</strong> {language || "Not Selected"}</p>
-                        <p><strong>Commentary:</strong> {commentary || "Not Provided"}</p>
+                        <p><strong>Commentary:</strong> {commentary || ""}</p>
                         <Button onClick={() => setOpenModal(false)} variant="contained" className="mt-4">
                             Close
                         </Button>
