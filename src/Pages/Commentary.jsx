@@ -176,7 +176,7 @@ const CommentaryCard = () => {
                             </div>
 
                             {/* Commentary Box (Spans Full Width) */}
-                            {/* <Box sx={{ width: "100%", mt: 6 }}>
+                            <Box sx={{ width: "100%", mt: 6 }}>
                                 <TextField
                                     label="Commentary"
                                     variant="outlined"
@@ -186,7 +186,7 @@ const CommentaryCard = () => {
                                     onChange={(e) => setCommentary(e.target.value)}
                                     fullWidth
                                 />
-                            </Box> */}
+                            </Box>
 
                             {/* Start Game Button */}
                             <button
