@@ -35,7 +35,7 @@ const CommentaryCard = () => {
 
         setLoadingPlayers(true);
         try {
-            const response = await fetch(`http://127.0.0.1:8001/team_players/${teamId}`);
+            const response = await fetch(`http://35.206.83.91:8000/team_players/${teamId}`);
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
             const data = await response.json();
@@ -74,7 +74,7 @@ const CommentaryCard = () => {
 
     const handleStartGame = async () => {
         try {
-            const response = await fetch('http://127.0.0.1:8001/process-commentary', { method: 'POST' }); // API request to fetch game data
+            const response = await fetch('http://35.206.83.91:8000//process-commentary', { method: 'POST' }); // API request to fetch game data
             const data = await response.json();
 
             setResponseData({

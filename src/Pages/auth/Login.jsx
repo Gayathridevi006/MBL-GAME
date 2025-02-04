@@ -32,7 +32,7 @@ const Login = () => {
         setError("");
 
         try {
-            const response = await fetch("http://127.0.0.1:8001/login", {
+            const response = await fetch("http://35.206.83.91:8000/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
@@ -122,13 +122,13 @@ const Login = () => {
                         </Button>
 
                         {/* Google Sign-In Button */}
-{/*                         <button
+                        <button
                             type="button"
                             onClick={handleGoogleSignIn}
                             className="bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg w-full"
                         >
                             Login with Google
-                        </button> */}
+                        </button>
                     </form>
                 </div>
             </div>
