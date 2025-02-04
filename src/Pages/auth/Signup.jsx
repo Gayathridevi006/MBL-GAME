@@ -41,7 +41,7 @@ const Signup = () => {
         }
 
         try {
-            const response = await fetch("http://35.206.83.91:8000/register", {
+            const response = await fetch("http://127.0.0.1:8001/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -67,13 +67,19 @@ const Signup = () => {
     };
 
     const handleGoogleSignIn = async () => {
+        setError(""); // Reset error before attempting sign-in
         try {
             await signInWithGoogle();
         } catch (error) {
-            console.error("Error signing in with Google:", error.message);
-            setError("Google sign-in failed. Please try again.");
+            if (error.code === "auth/cancelled-popup-request" || error.code === "auth/popup-closed-by-user") {
+                console.warn("Popup closed before completing authentication.");
+            } else {
+                console.error("Error signing in with Google:", error.message);
+                setError("Google sign-in failed. Please try again.");
+            }
         }
     };
+
 
     return (
         <div
