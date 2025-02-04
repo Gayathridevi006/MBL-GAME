@@ -41,7 +41,7 @@ const Signup = () => {
         }
 
         try {
-            const response = await fetch("http://127.0.0.1:8001/register", {
+            const response = await fetch("http://35.206.83.91:8000/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -124,13 +124,13 @@ const Signup = () => {
                         </Button>
 
                         {/* Google Sign-In Button */}
-{/*                         <button
+                        <button
                             type="button"
                             onClick={handleGoogleSignIn}
                             className="bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg w-full"
                         >
                             Sign in with Google
-                        </button> */}
+                        </button>
                     </form>
                 </div>
             </div>

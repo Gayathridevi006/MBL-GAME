@@ -33,7 +33,7 @@ const ScoreCard = () => {
 
         setLoadingPlayers(true);
         try {
-            const response = await fetch(`http://127.0.0.1:8001/team_players/${teamId}`);
+            const response = await fetch(`http://35.206.83.91:8000/team_players/${teamId}`);
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
 
             const data = await response.json();
@@ -63,7 +63,7 @@ const ScoreCard = () => {
         setOpenModal(true);
 
         try {
-            const response = await fetch(`http://127.0.0.1:8001/player_id/${playerId}`);
+            const response = await fetch(`http://35.206.83.91:8000/player_id/${playerId}`);
             if (!response.ok) throw new Error("Failed to fetch player image.");
 
             const data = await response.json();
